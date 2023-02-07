@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,viewport-fit=cover">
+    <meta property="og:title" content="Mizy's Design">
+    <meta property="og:url" content="http://www.mizylee.com">
+    <meta property="og:image" content="http://www.mizylee.com/images/share.jpg">
+    <meta property="og:description" content="設計不僅僅是賦予美感，更是解決問題的方式。">
+    <title>Mizy - Illustrator ,  Web designer , Visual designer</title>
+    
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="bookmark" href="favicon.ico"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	 <a href="#" class="btntop"><span class="glyphicon fa fa-chevron-up"></span>TOP</a>
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between position-fixed">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mizy</a>
+            <span class="navbar-text mr-auto d-none d-sm-block">Illustrator ,  Web designer , Visual designer</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#maiNav" aria-controls="maiNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="maiNav">
+                <div class="navbar-nav d-lg-flex ml-auto">
+                    <a class="nav-item nav-link" href="index.html#Portfolio">Portfolio</a>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link" href="mailto:leeshang326@gmail.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+	<div class="container main-content">
+		<div class="col-md-6 contact-img"></div>
+		<div class="col-md-6 contact-form">
+			<h3>Contact</h3>
+			<form id="contactform" class="needs-validation" novalidate>
+				<div class="form-group">
+					<label for="name">姓名</label>
+					<input type="text" id="name" class="form-control" required>
+					<div class="invalid-feedback">
+						請填寫！
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" id="mail" class="form-control" required>
+					<div class="invalid-feedback">
+						請填寫！
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="contactInner">內容</label>
+					<textarea id="contactInner" class="form-control" rows="3" required></textarea>
+					<div class="invalid-feedback">
+						請填寫！
+					</div>
+				</div>
+				<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+	 <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm contact">
+                    <a href="mailto:leeshang326@gmail.com" class="fa fa-envelope-o"></a>
+                    <a href="https://www.behance.net/mizylee" class="fa fa-behance" target="_blank"></a>
+                </div>
+                <div class="col-sm copyright">
+                    © Mizy 2019 Copyright. All Rights Reserved.
+                </div>                   
+            </div>    
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+
+	<script>
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  window.addEventListener('load', function() {
+	    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	    var forms = document.getElementsByClassName('needs-validation');
+	    // Loop over them and prevent submission
+	    var validation = Array.prototype.filter.call(forms, function(form) {
+	      form.addEventListener('submit', function(event) {
+	      			    // 姓名
+		    var name = $('#name').val();
+
+		    // 類別
+		    var mail = $('#mail').val();
+
+		    // 內容
+		    var msg = $('#contactInner').val();
+		    
+			var data = {
+			  'entry.514821169': name,
+			  'entry.1254813219': mail,
+			  'entry.1555153620': msg
+			};  
+
+			$.ajax({
+			  type: 'POST',
+			  url: 'https://docs.google.com/forms/d/e/1FAIpQLSe0jkCHMQzAqgUDGK3d4wtHyZngVqzDDJ9n_4bATOvymaYNEA/formResponse',
+			  data: data,
+			  contentType: 'application/json',
+			  dataType: 'jsonp',
+			  success: function(text) {
+			    alert('資料已送出！');
+			  }
+  			});
+	        if (form.checkValidity() === false) {
+	          event.preventDefault();
+	          event.stopPropagation();
+	        }
+	        form.classList.add('was-validated');
+	      }, false);
+	    });
+	  }, false);
+	})();
+	</script>
+
+    <!-- SVG -->
+    <script src="js/svgxuse.js"></script>
+
+    <!-- 選項切換 -->
+    <script src="js/isotope.pkgd.min.js"></script> 
+
+    <script src="js/common.js"></script>
+</body>
+</html>
