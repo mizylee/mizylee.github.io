@@ -96,17 +96,17 @@
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-webcode.svg#icon-webcode"></use></svg>
+                        <svg><use xlink:href="images/icon-webcode.svg#icon-graphics"></use></svg>
                     </div>
                     <h3>Web/UI Design</h3>
-                    <p class="expound">網頁UI介面設計，並熟悉跨裝置網頁RWD製作，css、html、Bootstrap撰寫，與JQ套件的使用。</p>
+                    <p class="expound">參與需求訪談、討論整體流程，並依功能快速繪製wireframe手稿與需求端確認，規劃整體視覺guideline產出mockup畫面</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-infographics.svg#icon-illustr"></use></svg>
+                        <svg><use xlink:href="images/icon-infographics.svg#icon-webcode"></use></svg>
                     </div>
                     <h3>Infographics Design</h3>
-                    <p class="expound">將資訊圖表做視覺化設計、簡報樣板設計與排版。</p>
+                    <p class="expound">悉跨裝置網頁RWD製作，css、html、Bootstrap撰寫，與JQ套件的使用。</p>
                 </div>
             </div>
         </div>
@@ -115,14 +115,14 @@
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
             <div class="project">
-                <ul class="project-type">
-                    <li class="all"><button class="is-checked"  data-filter="*">All</button></li>
+                <ul class="project-type" id="filters">
+                    <li class="all"><button class="selected"  data-filter="*">All</button></li>
                     <li><button data-filter=".graphics-design">Graphics Design</button></li>
                     <li><button data-filter=".illustr">Illustration</button></li>
                     <li><button data-filter=".website">WebSite</button></li>
                     <li><button data-filter=".ui">UI Design</button></li>
                 </ul>
-                <div class="row grid">
+                <div class="row grid" id="isotope-list">
                     <div class="col-sm-6 col-lg-4 work-item ui website">
                         <a href="Portfolio-jusdaids-home.html">
                             <div class="work-thumbnail"><img src="images/ids-home-0.jpg" alt=""></div>
