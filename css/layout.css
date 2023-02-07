@@ -1,0 +1,866 @@
+body, html {
+	font-size: 15px;
+	color: #333;
+	background: #f8f9fa;
+    font-family: Arial, Helvetica, '華文黑體', 'STHeiti', '微軟正黑體', 'Microsoft JhengHei', '新細明體', 'PMingLiU', '細明體', 'MingLiU', '標楷體', 'DFKai-sb', sans-serif;
+    padding-top: constant(safe-area-inset-top);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+}
+/*有陰影的圖片*/
+.img-shadow {
+	box-shadow: 0 0 7px rgba(0,0,0,0.1); 
+}
+/*TOP button*/
+.btntop {
+	position:fixed;
+	width:40px;
+	height:40px;
+	background: rgba(255,255,255,0.5);
+	border-radius:4px;
+    border: 1px solid #ffd522;
+	text-align: center;
+	color: #ffd522;
+	right:5px;
+	bottom: 10px;
+	font-size: 0.8rem;
+    z-index: 999;
+    opacity: 0.8; /* 按鈕原始透明度 */
+    transition: all .5s; /* 動畫效果 持續期間 */
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+}
+.btntop .fa-chevron-up {
+    line-height: 0.75;
+}
+.btntop:hover, .btntop:focus {
+	text-decoration: none;
+	color:#fff;
+	background: #ffd522;
+    opacity: 1; /* 透明度 */
+    border: 1px solid #fff;
+}
+
+.btntop span{
+	display: block;
+}
+.btntop>span {
+	margin-top:5px;
+}
+/*瀏覽列*/
+.navbar {
+	background: #fff;
+}
+#maiNav{
+	margin: 0 -15px;
+}
+.navbar.position-fixed {
+	z-index: 999;
+	width: 100%;
+}
+.navbar-brand {
+	font-size: 0;
+	line-height:  0;
+	overflow: hidden;
+	background: url(../images/logo-mizy.png) no-repeat;
+	width: 96px;
+	height: 40px;
+	background-size: 100% auto;
+}
+.navbar-toggler {
+    padding: .3rem;
+    font-size: 1rem;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #333;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+	background:  #ffd522;
+	color:  #fff;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: transparent;
+}
+.navbar-light .navbar-toggler:hover,.navbar-light .navbar-toggler:active {
+	color: #ffd522;
+}
+
+.navbar-collapse {
+    background: #eee;
+    transition: background-color 0.5s ease-out;
+}
+.navbar-collapse .navbar-nav .nav-link {
+    padding: .75rem 1rem; 
+    border-top: #fff 1px solid;
+}
+/*向下滾動時*/
+.navbar.scrolled {
+	border-bottom: 1px solid #eee;
+	background: rgba(255,255,255,0.95);
+	padding-bottom: 0;
+}
+.navbar.scrolled .navbar-brand {
+	width: 87px;
+	height: 36px;
+}
+/*首頁大圖*/
+.jumbotron-fluid {
+	padding-top: 72px;/*置頂nav高度*/
+}
+.jumbotron-fluid .circle {
+	background: #eee;
+	border-radius: 50%;
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+}
+.jumbotron-fluid .photo {
+	background: url(../images/mizy-photo.png) no-repeat 50%;
+	background-size: 80% auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+.jumbotron-fluid .col-md {
+	display: flex;
+    align-items:center;
+    justify-content:center;
+    margin: 15px 0;
+}
+.jumbotron-fluid .title-inner {
+	width: 400px;
+	text-align: center;
+}
+.jumbotron-fluid .title-inner h1 {
+	font-size: 2rem;
+}
+.title-inner .name {
+	color: #2993c4;
+	font-size: 3.2rem;
+	position: relative;
+	white-space:nowrap;
+	display: block;
+}
+.title-inner .name:before {
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 2px;
+	background: #2993c4;
+	top: 1.2em;
+}
+.title-inner .subtitle {
+	padding: 0;
+	margin-top: 1em;
+	color: #666;
+}
+.title-inner .subtitle li {
+	list-style: none;
+	display: inline-block;
+	margin-top: 5px;
+}
+.title-inner .subtitle li:before {
+	content: '/';
+	font-size: 0.9em;
+	color: #ccc;
+	margin: 0 5px 0 6px;
+}
+.title-inner a.btn {
+	color: #2993c4;
+	font-size: 1.2rem;
+	border: 1px solid rgba(41,147,196,.5);
+	padding: .5em .8em;
+	margin-top: .5em;
+}
+.title-inner a.btn:hover {
+	background: rgba(41,147,196,.9);
+	color: #fff;
+	border-color: #2993c4;
+}
+/*首頁標題*/
+.section-title {
+	text-align: center;
+	color: #666;
+	margin: 0 0 30px 0;
+}
+.section-title:before {
+	margin-right: 1em;
+}
+.section-title:after {
+	margin-left: 1em;
+}
+/*技能*/
+.section-skill {
+	background: #ededed;
+	padding: 80px 0;
+	position: relative;
+}
+.section-skill:before {
+	content: " ";
+	width: 40%;
+	left: 10%;
+	height: 6px;
+	top: -3px;
+	display: block;
+	background: #ffd522;
+	position: absolute;
+	top: -3px;
+}
+.section-skill h3 {
+	font-size: 20px;
+	text-align: center;
+}
+.section-skill h3+.expound {
+	color: #666;
+	font-size: 15px;
+	margin: 10px 0;
+    text-align: center;
+}
+.skill-icon {
+	text-align: center;
+	width: 120px;
+	margin: 0 auto 15px auto;
+	padding-top: 15px;
+	background: #fff;
+	border-radius: 50%;
+}
+.skill-icon svg {
+    width: 100px;
+    height: 100px;
+    fill: #ffd522;
+}
+/*work*/
+.section-work {
+	padding: 50px 0 20px 0;
+}
+.work-item h3 {
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+}
+.work-item .sort {
+	font-size: 15px;
+	color: #666;
+}
+.work-item {
+	margin-bottom: 1.2rem;
+}
+.work-item a {
+	display: block;
+	height: 100%;
+	color: #333;
+}
+.work-item a:hover {
+	color: #2993c4;
+}
+.item-content {
+	text-align: center;
+}
+.work-thumbnail {
+	width: 100%;
+	height: 0;
+	padding-bottom: 74%;
+	background: #fff;
+	margin: 10px 0;
+	overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.work-thumbnail img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.work-thumbnail:hover {
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+.work-item a:hover img,.work-thumbnail:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+/*專案分類tab*/
+.project-type {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.project-type li + li {
+	margin-left: 10px; 
+}
+.project-type li button {
+	color: #666;
+	padding: 5px 10px;
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+.project-type li button:hover, .project-type li button.is-checked {
+	background: #ffd522;
+	color: #fff;
+	border-radius: 3px;
+	text-decoration: none;
+}
+h2.project-title {
+	font-size: 1.5rem;
+}
+/*contact*/
+.contact a {
+	border-radius: 50%;
+	background: #ffd522;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.2rem;
+	width: 2.2rem;
+	height: 2.2rem;
+	text-align: center;
+	line-height: 2.2rem;
+	margin: 0 5px 0 0;
+}
+.contact a:hover {
+	text-decoration: none;	
+}
+.title-inner .contact {
+	display: block;
+    line-height: 2rem;
+    margin-bottom: -10px;
+}
+.title-inner .contact a {
+	margin-left: 0;
+}
+.title-inner .contact a + a {
+	margin-left: -10px;
+}
+/*footer*/
+footer {
+	background: #ffd522;
+	padding: 10px 0;
+}
+footer .contact a {
+	background: #fff;
+	color :#ffd522;
+}
+footer .contact a:hover {
+	background: #666;
+}
+.copyright {
+	text-align: right;
+	font-size: 14px;
+	color: #fff;
+	line-height: 2.2rem;
+	padding-right: 50px;
+}
+/*內頁主要內容*/
+.main-content {
+	padding-top: 72px; /*置頂nav高度*/
+	padding-bottom: 15px;
+}
+/*專案內頁*/
+.project-control {
+	padding: 2px 0;
+}
+.project-control .project-back {
+	float: left;
+}
+.project-control .project-btns {
+	float: right;
+	padding-top: 5px;
+}
+.project-control a {
+	font-size: 1.8rem;
+	color: #ccc;
+	display: inline-block;
+	text-decoration: none;
+	line-height: calc(1.5rem + 12px); 
+}
+.project-control a:hover {
+    color: #ffd522;
+}
+.project-control .project-btns a {
+	padding: 0 12px;
+	border:  1px solid #ccc;
+}
+.project-control .project-btns a:hover {
+    border-color: #ffd522;
+    background: #ffd522;
+    color: #fff;
+}
+.project-control .project-btns a+a {
+	margin-left: 8px;
+}
+/*按鈕在頁首*/
+.project-control.control-top {
+	border-bottom:  1px solid #ddd;
+}
+.project-control.control-top .project-back {
+	padding-top: 10px;
+}
+.project-control.control-top .project-btns a {
+	margin-bottom: 5px;
+}
+/*按鈕在頁尾*/
+.project-control.control-footer {
+	border-top:  1px solid #ddd;
+	margin-top: 20px;
+}
+.project-control .project-back {
+}
+.project-control.control-footer .project-btns a {
+	margin-top: 5px;
+}
+
+.project-tags {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	color: #666;
+	width: 100%;
+}
+.project-tags li {
+	border-bottom:  1px dotted #ddd;
+	padding: 10px 0;
+}
+.project-tags li:before{
+	content: '\f138';
+	margin-right: 5px;
+	color: #ffd522;
+}
+
+.project-info {
+	margin-bottom: 2rem;
+	margin-top: 20px;
+}
+/*按鈕*/
+.btn {
+	padding: .5rem 1rem;
+}
+.btn-goview, a.btn-goview {
+	background: #c5c5c5;
+	color: #fff;
+}
+.btn-goview:hover, a.btn-goview:hover {
+	background: #ffd522;
+}
+/*about*/
+.profile-area .row {
+	align-items: center;
+}
+.profile-area {
+	margin-bottom: 20px;
+}
+.profile-area .photo {
+	overflow: hidden;
+	border-radius: 50%;
+	background: #fff;
+    position:relative;
+    overflow:hidden;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+.profile-area .photo:after {
+    padding-top: calc(90% + 30px);
+    content:"";
+    display: block;
+}
+.profile-area .photo img {
+    position:absolute;
+    top:10px;
+    right:0;
+    left:0;
+    max-width:100%;
+    margin:auto;
+}
+.profile-area .name {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+.profile-area .name .en {
+	margin-left: 15px;
+	color: #888;
+	font-weight: normal;
+}
+.profile-area .career {
+	color: #888;
+	text-align: center;	
+}
+.profile-area .intro {
+	margin-top: 5px;
+}
+.about-area {
+	padding: 20px 0;
+	margin-bottom: 20px;
+}
+.about-area h3 {
+	position: relative;
+	margin-bottom: 50px;
+	color: #666;
+}
+.about-area h3:after{
+	content: " ";
+	display: inline-block;
+	height: 1px;
+	background: #ccc;
+	position: absolute;
+	right: 0;
+	top: .6em;
+}
+.about-area h3.title-work:after{
+	width: calc(100% - 8.5em);
+}
+.about-area h3.title-edu:after{
+	width: calc(100% - 5.5em);
+}
+.about-area h3.title-auto:after{
+	width: calc(100% - 7.5em);
+}
+.about-area h3.title-eac:after{
+	width: calc(100% - 12em);
+}
+.about-area h3.title-hobby:after{
+	width: calc(100% - 5em);
+}
+.about-area s.intro {
+	border-top: 15px;
+}
+.about-area .article {
+	margin: 0 15px;
+}
+.exper-block {
+	padding-left: 10px;
+	border-left: 1px solid #ffd522;
+	margin-left: 10px;
+	padding-bottom: 20px;
+}
+.time-inner:before {
+	display: block;
+	content: " ";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ffd522;
+	left: -16px;
+	top: -1.5em;
+}
+.exper-block:first-of-type .time-inner:before {
+    top: -2.2em;
+}
+.exper-block .year {
+	font-size: 18px;
+}
+.exper-block .year .length {
+	font-size: 0.8em;
+	color: #888;
+	display: inline-block;
+}
+
+.exper-block:first-of-type .companymane {
+    margin-top: -8px;
+}
+.exper-block:first-of-type .time-inner {
+    margin-top: 8px;
+}
+
+.exper-block:last-of-type .time-inner {
+    border: transparent;
+   	padding-bottom: 0px;
+}
+.exper-block:last-of-type .time-inner:after {
+	position: absolute;
+	content: " ";
+	width: 1px;
+	height: 8px;
+	background: #ffd522;
+	display: block;
+	top: 0;
+	left: 0;
+}
+.time-inner .companymane {
+	font-size: 20px;
+	font-weight: bold;
+	color: #2993c4;
+}
+.time-inner .jobtitle, .time-inner .companymane small {
+	color: #888;
+}
+.time-inner .jobContent {
+	margin-top: 10px;
+}
+
+/*興趣*/
+.hobby{
+	margin: 0;
+	padding: 0;
+}
+.hobby li  {
+	margin: 0 20px 10px 0;
+	list-style: none; 
+	display: inline-block;
+	text-align: center;
+	color: #666;
+}
+.hobby .lover, #yoga, #taiji, #tgame {
+	fill: #ffd522;
+	width: 40px;
+	height: 40px;
+}
+.hobby .lover {
+	margin-top: 2px;
+}
+.hobby i.fa {
+	color: #ffd522;
+	font-size: 25px;
+	margin-top: 8px;
+}
+.hobby .icon-wrap:hover i.fa, .hobby .icon-wrap:hover .lover,
+.hobby .icon-wrap:hover #yoga, .hobby .icon-wrap:hover #taiji, 
+.hobby .icon-wrap:hover #tgame {
+	color: #f8f9fa;
+	fill: #f8f9fa;
+}
+.icon-wrap {
+	width: 46px;
+	height: 46px;
+	margin-bottom: 5px;
+	background: #f8f9fa;
+	border: 1px solid #ffd522;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.icon-wrap:hover {
+	background: #ffd522;
+	color: #f8f9fa;
+}
+/*影片媒體*/
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.prototype_pv {
+    margin: 20px auto;
+    position: relative;
+    padding-bottom: 105%;
+    height: 0;
+}
+.embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.embed video {
+    width: 100% !important;
+    height: 100% !important;
+}
+/*2比1影片*/
+.embed-responsive-2by1::before {
+    padding-top: 43.5%;
+}
+.embed-responsive-4by31::before {
+    padding-top: 65%;
+}
+/*圖片放大*/
+#bootstrapViewer .modal-lg {
+    max-width: 1400px;
+}
+/*底線標題*/
+.head-boder {
+	border-bottom:  1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+/*案例*/
+.color-style {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.colorLi {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.square-li {
+	width:  40px;
+    margin: 8px;
+}
+.square-color {
+	height: 12px;
+}
+
+/*陰影*/
+.box-shadow {
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+
+@media (min-width: 576px){
+	.container {
+	    max-width: 98%;
+	}
+	.navbar-brand {
+		width: 110px;
+		height: 46px;
+	}
+	.navbar.scrolled .navbar-brand {
+		width: 96px;
+		height: 40px;
+	}
+
+	.section-title:before, .section-title:after {
+		content: '';
+	    display: inline-block;
+	    width: calc(50% - 4em);
+	    height: 1px;
+	    background: #ccc;
+	    position: relative;
+	    top: -0.2em;
+	}
+	.section-skill h3+.expound {
+	    margin: 10px 15px 15px 15px;
+	}
+	/*about*/
+	.profile-area {
+		padding: 15px 0;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+	.profile-area .photo {
+		width: 90%;
+		margin: auto;
+	}
+	.profile-area .name, .profile-area .career  {
+		text-align: left;
+	}
+	.exper-block {
+		padding-left: 0;
+		border-left: none;
+		margin-left: 0;
+		padding-bottom: 0;
+	}
+	.exper-block .year {
+		text-align: right;
+		padding-right: 30px;
+		padding-left: 0px;
+	}
+	.time-inner {
+		padding-left: 30px;
+		position: relative;
+		border-left: 1px solid #ffd522;
+		padding-bottom: 30px;
+		margin-left: 15px;
+	}
+	.title-inner .contact {
+		position: relative;
+		top: -10px;
+		display: inline;
+		line-height: normal;
+    	margin-bottom: 0;
+	}
+	.time-inner:before {
+		left: -6px;
+		top: 8px;
+	}
+	.exper-block:first-of-type .time-inner:before {
+	    top: 0;
+	}
+	.exper-block .year .length {
+		display: block;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+	    max-width:  98%;
+	}
+	.jumbotron-fluid .title-inner {
+		text-align: left;
+		padding-left: 10%;
+	}
+	.col-md.photo-wrap {
+	    justify-content: left;
+	}
+	/*專案分類tab*/
+	.project-type {
+		justify-content: flex-end;
+	}
+	.project-type .all {
+		flex-grow: 2;
+	}
+	.prototype_pv {
+	    padding-bottom: 80%;
+	}
+	.btn-demo {
+	    padding-bottom: 1.5em;
+	    border-bottom: 1px solid #ddd;
+	    margin-bottom: 1em;
+	}
+	/*台鐵頁面*/
+	.train-index {
+		position: relative;
+		top: -180px;
+		margin-bottom: -180px;
+	}
+	.colorLi {
+	    width: 30px;
+	    height: 30px;
+	    margin: 5px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+	    max-width: 1200px;
+	}
+	.navbar-expand-lg > .container {
+	    position: relative;
+	}
+	.navbar-expand-lg {
+	    padding-top: 1.2rem;
+	}
+	.navbar-nav {
+		border-top: 5px solid #ffd522;
+		height: 72px;
+	}
+	.navbar-collapse {
+	    background: transparent;
+	    transition: none;
+	}
+	#maiNav {
+		position: absolute;
+	    top: -18px;
+	    right: 0;
+	}
+	#maiNav a {
+		padding-top: 1rem;
+	}
+
+	.navbar.scrolled.navbar-expand-lg {
+	    padding-top: 0.5rem;
+	}	
+	.navbar.scrolled #maiNav {
+    	margin-top: -0.5rem;
+    }  
+	.navbar-collapse .navbar-nav .nav-link {
+	    border-top: none;
+	    line-height: 40px;
+	}
+	#maiNav {
+		margin: 0;
+	}
+}
+
+
