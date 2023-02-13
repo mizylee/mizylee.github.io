@@ -9,29 +9,31 @@
     <meta property="og:url" content="http://www.mizylee.com">
     <meta property="og:image" content="http://www.mizylee.com/images/share.jpg">
     <meta property="og:description" content="設計不僅僅是賦予美感，更是解決問題的方式。">
-    <title>Mizy - Illustrator ,  Web designer , Visual designer</title>
-    
-    <link rel="shortcut icon" href="favicon.ico"/>
-    <link rel="bookmark" href="favicon.ico"/>
+    <title>Mizy - Illustrator , Web designer , Visual designer</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="bookmark" href="favicon.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <!-- animate CSS -->
     <link rel="stylesheet" href="css/animate.css">
-
     <!--font awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
     <link rel="stylesheet" href="css/layout.css">
+
+    <!--動態-->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
 </head>
 
 <body>
     <a href="#" class="btntop"><span class="glyphicon fa fa-chevron-up"></span>TOP</a>
-
     <nav class="navbar navbar-expand-lg navbar-light justify-content-between position-fixed">
         <div class="container">
             <a class="navbar-brand" href="index.html">Mizy</a>
-            <span class="navbar-text mr-auto d-none d-sm-block">Illustrator ,  Web designer , Visual designer</span>
+            <span class="navbar-text mr-auto d-none d-sm-block">Illustrator , Web designer , Visual designer</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#maiNav" aria-controls="maiNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
@@ -44,13 +46,12 @@
             </div>
         </div>
     </nav>
-
     <div class="jumbotron-fluid">
-       <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md">
                     <div class="title-inner">
-                        <h1 class="wow feadInUp" data-wow-duration="2s" data-wow-delay="5s">Hello,I'm 
+                        <h1 class="wow bounceIn" data-wow-duration="0.8s" data-wow-delay="0s">Hello,I'm
                             <span class="name">Mizy Lee
                                 <span class="contact">
                                     <a href="mailto:leeshang326@gmail.com" class="fa fa-envelope-o"></a>
@@ -58,22 +59,20 @@
                                 </span>
                             </span>
                         </h1>
-
-                        <ul class="subtitle wow feadInUp" data-wow-duration="2s" data-wow-delay="1s">
+                        <ul class="subtitle wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.5s">
                             <li>對色彩搭配有十足的敏銳度</li>
                             <li>並喜歡挑戰兼具美感的coding方式</li>
                             <li>帶入使用者情境，用設計來解決問題</li>
                         </ul>
-                        <a href="about.html" class="btn"> About me</a>
+                        <a href="about.html" class="btn wow fadeIn" data-wow-duration="1.2s" data-wow-delay="1s"> About me</a>
                     </div>
                 </div>
                 <div class="col-md photo-wrap">
                     <div class="circle">
-                        <div class="photo"></div>                        
+                        <div class="photo"></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="section-skill">
@@ -82,28 +81,36 @@
             <div class="row">
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-illustrator.svg#icon-illustr"></use></svg>
+                        <svg>
+                            <use xlink:href="images/icon-illustrator.svg#icon-illustr"></use>
+                        </svg>
                     </div>
                     <h3>Illustrator</h3>
                     <p class="expound">設計美術相關科系畢，擅長插畫、圖像、人物角色設計</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-graphics.svg#icon-graphics"></use></svg>
+                        <svg>
+                            <use xlink:href="images/icon-graphics.svg#icon-graphics"></use>
+                        </svg>
                     </div>
                     <h3>Graphics Design</h3>
                     <p class="expound">擅長各類型平面、字體設計、banner製作、品牌CIS視覺設計，並熟悉印刷相關流程與送印。</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-webcode.svg#icon-infographics"></use></svg>
+                        <svg>
+                            <use xlink:href="images/icon-infographics.svg#icon-infographics"></use>
+                        </svg>
                     </div>
                     <h3>UI/UX Design</h3>
                     <p class="expound">參與需求訪談、討論整體流程，並依功能快速繪製wireframe手稿與需求端確認，規劃整體視覺guideline產出mockup畫面</p>
                 </div>
                 <div class="col-6 col-md-3">
                     <div class="skill-icon">
-                        <svg><use xlink:href="images/icon-infographics.svg#icon-webcode"></use></svg>
+                        <svg>
+                            <use xlink:href="images/icon-webcode#icon-webcode.svg"></use>
+                        </svg>
                     </div>
                     <h3>Front-end Design</h3>
                     <p class="expound">悉跨裝置網頁RWD製作，css、html、Bootstrap撰寫，與JQ套件的使用。</p>
@@ -115,35 +122,61 @@
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
             <div class="project">
-                <ul class="project-type" id="filters">
-                    <li class="all"><button class="selected"  data-filter="*">All</button></li>
+                <!--<ul class="project-type" id="filters">
+                    <li class="all"><button class="selected" data-filter="*">All</button></li>
                     <li><button data-filter=".graphics-design">Graphics Design</button></li>
                     <li><button data-filter=".illustr">Illustration</button></li>
                     <li><button data-filter=".website">WebSite</button></li>
                     <li><button data-filter=".ui">UI Design</button></li>
-                </ul>
+                </ul>-->
                 <div class="row grid" id="isotope-list">
                     <div class="col-sm-6 col-lg-4 work-item ui website">
                         <a href="Portfolio-jusdaids-home.html">
-                            <div class="work-thumbnail"><img src="images/ids-home-0.jpg" alt=""></div>
+                            <div class="work-thumbnail">
+                                <img src="https://mizylee.files.wordpress.com/2023/01/aaf24-ids-home-0.jpg" alt="">
+                            </div>
                             <div class="item-content">
-                                 <h3>IDS北美雲倉系統行銷網站</h3>
+                                <h3>跨境倉儲行銷網站</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-4 work-item ui website">
                         <a href="Portfolio-jusdaids-system.html">
-                            <div class="work-thumbnail"><img src="images/ids-ui-0.jpg" alt=""></div>
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/8ed16-ids-ui-0.jpg" alt=""></div>
                             <div class="item-content">
-                                 <h3>IDS系統使用介面</h3>
+                                <h3>雲端倉儲系統</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 work-item ui website">
+                        <a href="Portfolio-eaudit.html">
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/98d83-eaudit-system-0.jpg" alt=""></div>
+                            <div class="item-content">
+                                <h3>線上稽核系統</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 work-item ui website">
+                        <a href="Portfolio-iplm.html">
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/cd008-iplm-system-0.jpg" alt=""></div>
+                            <div class="item-content">
+                                <h3>iPLM 系統</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 work-item ui website">
+                        <a href="Portfolio-if.html">
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/bb09c-if-system-0.jpg" alt=""></div>
+                            <div class="item-content">
+                                <h3>食品配方系統</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-4 work-item ui">
                         <a href="Portfolio-luckypay.html">
-                            <div class="work-thumbnail"><img src="images/luckypay_0.jpg" alt=""></div>
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/f863d-luckypay_0.jpg" alt=""></div>
                             <div class="item-content">
-                                 <h3>LuckyPay redesign</h3>
+                                <h3>LuckyPay redesign</h3>
                             </div>
                         </a>
                     </div>
@@ -151,26 +184,19 @@
                         <a href="Portfolio-dreampig.html">
                             <div class="work-thumbnail"><img src="images/DreamPig-0.jpg" alt=""></div>
                             <div class="item-content">
-                                 <h3>夢想小豬APP</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 work-item graphics-design illustr">
-                        <a href="Portfolio-adan.html">
-                            <div class="work-thumbnail"><img src="images/adan-00.jpg" alt=""></div>
-                            <div class="item-content">
-                                 <h3>研華桌遊日活動</h3>
+                                <h3>夢想小豬APP</h3>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-4 work-item ui website">
                         <a href="Portfolio-train.html">
-                            <div class="work-thumbnail"><img src="images/train-0.jpg" alt=""></div>
+                            <div class="work-thumbnail"><img src="https://mizylee.files.wordpress.com/2023/01/0c0e9-train-0.jpg" alt=""></div>
                             <div class="item-content">
-                                 <h3>台鐵第四代網站</h3>
+                                <h3>台鐵第四代網站</h3>
                             </div>
                         </a>
                     </div>
+                    <!--
                     <div class="col-sm-6 col-lg-4 work-item ui">
                         <a href="Portfolio-eltaott.html">
                             <div class="work-thumbnail"><img src="images/ELTAOTT0.png" alt=""></div>
@@ -290,7 +316,7 @@
                                 <h3>HiNet寬頻上網</h3>
                             </div>
                         </a>
-                    </div>      
+                    </div>  <-->
                 </div>
             </div>
         </div>
@@ -304,23 +330,21 @@
                 </div>
                 <div class="col-sm copyright">
                     © Mizy 2019 Copyright. All Rights Reserved.
-                </div>                   
-            </div>    
+                </div>
+            </div>
         </div>
     </footer>
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.1.0.js"></script>
-    
     <script src="js/bootstrap.min.js"></script>
-
     <!-- SVG -->
     <script src="js/svgxuse.js"></script>
-
-    <!-- 選項切換 -->
-    <script src="js/isotope.pkgd.min.js"></script> 
-
+    <!-- 選項切換
+    <script src="js/isotope.pkgd.min.js"></script> -->
     <script src="js/common.js"></script>
+
 </body>
 
 </html>
