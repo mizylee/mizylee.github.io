@@ -735,14 +735,15 @@ video {
 }
 /*技能*/
 .software {
-	margin: 10px 0;
+	margin: 10px -3px;
 	padding: 0;
+	display: flex;
 }
 .software li {
 	list-style: none;
-	display: inline-block;
 	width: 40px;
 	height:  40px;
+	margin: 3px;
 }
 .software li + li {
 	margin-left: 10px;
